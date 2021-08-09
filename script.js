@@ -3,7 +3,6 @@ let lower = document.querySelector("#lower-case");
 let proper = document.querySelector("#proper-case");
 let sentence = document.querySelector("#sentence-case");
 let save = document.querySelector("#save-text-file");
-
 let text = document.querySelector(".text");
 
 upper.onclick = function () {
@@ -61,11 +60,8 @@ save.onclick = function () {
     let element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.querySelector(".text").value));
     element.setAttribute('download', "text");
-
     element.style.display = 'none';
     document.body.appendChild(element);
-
     element.click();
-
     document.body.removeChild(element);
 }
